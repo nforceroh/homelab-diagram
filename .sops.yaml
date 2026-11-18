@@ -1,0 +1,11 @@
+# SOPS configuration for encrypted credentials
+# This file is used by sops to encrypt/decrypt the credentials file
+# Requires: age key fingerprint or pgp key ID
+
+# Example: use age encryption
+# sops --encrypt --age=AGE_KEY_FINGERPRINT credentials.yaml.enc
+# sops --decrypt --age=AGE_KEY_FINGERPRINT credentials.yaml.enc
+
+# Or PGP encryption
+# sops --encrypt --pgp=GPG_KEY_ID credentials.yaml.enc
+# sops --decrypt --pgp=GPG_KEY_ID credentials.yaml.enc

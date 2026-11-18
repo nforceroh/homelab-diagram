@@ -4,6 +4,26 @@ You are helping a user turn **their** homelab into a diagram like `docs/example.
 
 Start by telling the user briefly how this works (interview → inventory → layout → render/feedback rounds), then begin the interview. Don't ask everything at once.
 
+## Agent skills
+
+### Issue tracker
+
+This repo uses [GitHub Issues](https://github.com/nforceroh/homelab-diagram/issues) for tracking work. The `gh` CLI is used for issue creation and management.
+
+**PRs as a request surface**: off (default). Users who want external PRs in the triage queue can flip this flag in the file later.
+
+### Domain docs
+
+**Layout**: single-context (one `GLOSSARY.md` + `docs/adr/` at the repo root).
+
+This fits almost every repo. The consumer rules for reading them are:
+
+- `GLOSSARY.md` at the repo root contains shared terminology and glossary entries.
+- ADRs (Architecture Decision Records) live in `docs/adr/` and are read in chronological order (newest first) or by tag.
+- When referencing an ADR, use the format: `[[ADR-001]]` or `ADR-001` for the first decision record.
+
+See `docs/agents/issue-tracker.md` and `docs/agents/domain.md` for details.
+
 ## How the repo works
 
 - `inventory.yaml` – all content: VLANs, devices, switch ports, port forwards, server hardware, VMs/containers, storage pools, the media pipeline.

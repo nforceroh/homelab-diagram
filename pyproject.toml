@@ -8,6 +8,8 @@ license = "MIT"
 dependencies = [
     "pyyaml>=6.0",
     "pillow>=9.0",
+    "requests>=2.0",
+    "paramiko>=2.0",
 ]
 
 # This repository is a pair of scripts, not an importable package.
